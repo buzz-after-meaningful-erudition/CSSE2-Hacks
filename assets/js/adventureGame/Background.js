@@ -30,7 +30,7 @@ export class Background extends GameObject {
             // Create the canvas element and context
             this.canvas = document.createElement("canvas");
             this.canvas.style.position = "absolute";
-            this.canvas.style.zIndex = this.data.zIndex || "2";
+            this.canvas.style.zIndex = this.data.zIndex || "-2";
             this.canvas.id = data.id || "background";
             this.ctx = this.canvas.getContext("2d");
             

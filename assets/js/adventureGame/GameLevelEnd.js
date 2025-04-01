@@ -13,7 +13,7 @@ class GameLevelEnd {
     let height = gameEnv.innerHeight;
     let path = gameEnv.path;
 
-    const image_src_end = path + "/images/gamify/endbackground.png";
+    const image_src_end = path + "/images/gamify/TransparentEnd.png";
     const image_data_end = {
         name: 'end',
         greeting: "The End opens before you, a vast black void in the distance. The stone beneath your feet is yellowish and hard, and the air tingles.",
