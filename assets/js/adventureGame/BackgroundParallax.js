@@ -15,7 +15,7 @@ export class BackgroundParallax extends Background {
         super(data,gameEnv);
 
         this.position = data.position || { x: 0, y: 0 };
-        this.velocity = data.velocity || 1;
+        this.velocity = data.velocity || .2;
     }
 
     /**
