@@ -79,10 +79,25 @@ class GameLevelEnd {
     };
 
     const sprite_src_endereye = path + "/images/gamify/endereye.png";
-    const sprite_greet_endereye = "THIS IS HOW IT ENDS - Tejo :P";
+    
+    // Array of possible greetings for Endereye
+    const greetings = [
+        "Greetings, traveler. I see you’ve crossed paths with me today. Welcome to the world of endless wonders and mysteries. May your journey be ever enlightening.",
+        "Ah, another wanderer. Welcome to the realm of secrets. I hope you are ready for what lies ahead.",
+        "Welcome, brave soul. This land is full of challenges and rewards. What brings you here today?",
+        "You’ve arrived at an interesting time. The winds of fate are always changing. May your path be guided by wisdom.",
+        "The journey is long and fraught with unknowns, but fear not. I shall guide you through the shadows."
+    ];
+
+    // Select a random greeting from the array
+    function getRandomGreeting() {
+        const randomIndex = Math.floor(Math.random() * greetings.length);
+        return greetings[randomIndex];
+    }
+
     const sprite_data_endereye = {
         id: 'Endereye',
-        greeting: sprite_greet_endereye,
+        greeting: getRandomGreeting(),  // Initialize with a random greeting
         src: sprite_src_endereye,
         SCALE_FACTOR: 8,
         ANIMATION_RATE: 1000000,
@@ -99,12 +114,13 @@ class GameLevelEnd {
           ] 
         },
         reaction: function() {
-          alert(sprite_greet_endereye);
+            // Update greeting randomly each time the player interacts
+            alert(getRandomGreeting());
         },
         interact: function() {
-          let quiz = new Quiz();
-          quiz.initialize();
-          quiz.openPanel(sprite_data_endereye);
+            let quiz = new Quiz();
+            quiz.initialize();
+            quiz.openPanel(sprite_data_endereye);
         }
     };
 
@@ -213,4 +229,4 @@ class GameLevelEnd {
   }
 }
 
-export default GameLevelEnd;
+export default GameLevelEnd
