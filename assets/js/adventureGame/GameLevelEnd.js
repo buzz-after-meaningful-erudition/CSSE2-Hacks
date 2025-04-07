@@ -53,26 +53,26 @@ class GameLevelEnd {
         zIndex: 5  // Higher z-index to appear above parallax
     };
 
-    const sprite_src_steve = path + "/images/gamify/steve.png";
-    const STEVE_SCALE_FACTOR = 5;
-    const sprite_data_steve = {
-        id: 'Steve',
-        greeting: "Hi, I am Steve, the desert wanderer. I am looking for wisdom and adventure!",
-        src: sprite_src_steve,
-        SCALE_FACTOR: STEVE_SCALE_FACTOR,
+    const sprite_src_chillguy = path + "/images/gamify/chillguy.png";
+    const CHILLGUY_SCALE_FACTOR = 5;
+    const sprite_data_chillguy = {
+        id: 'Chill Guy',
+        greeting: "Hi, I am Chill Guy, the desert wanderer. I am looking for wisdom and adventure!",
+        src: sprite_src_chillguy,
+        SCALE_FACTOR: CHILLGUY_SCALE_FACTOR,
         STEP_FACTOR: 1000,
         ANIMATION_RATE: 50,
         INIT_POSITION: { x: width/16, y: height/2 },
-        pixels: {height: 256, width: 128},
-        orientation: {rows: 4, columns: 8 },
-        down: {row: 1, start: 0, columns: 3 },
-        downRight: {row: 7, start: 0, columns: 3, rotate: Math.PI/8 },
-        downLeft: {row: 5, start: 0, columns: 3, rotate: -Math.PI/8 },
-        left: {row: 5, start: 0, columns: 3 },
-        right: {row: 7, start: 0, columns: 3 },
+        pixels: {height: 384, width: 512},
+        orientation: {rows: 3, columns: 4 },
+        down: {row: 0, start: 0, columns: 3 },
+        downRight: {row: 1, start: 0, columns: 3, rotate: Math.PI/8 },
+        downLeft: {row: 2, start: 0, columns: 3, rotate: -Math.PI/8 },
+        left: {row: 2, start: 0, columns: 3 },
+        right: {row: 1, start: 0, columns: 3 },
         up: {row: 3, start: 0, columns: 3 },
-        upLeft: {row: 5, start: 0, columns: 3, rotate: Math.PI/8 },
-        upRight: {row: 7, start: 0, columns: 3, rotate: -Math.PI/8 },
+        upLeft: {row: 2, start: 0, columns: 3, rotate: Math.PI/8 },
+        upRight: {row: 1, start: 0, columns: 3, rotate: -Math.PI/8 },
         hitbox: { widthPercentage: 0.45, heightPercentage: 0.2 },
         keypress: { up: 87, left: 65, down: 83, right: 68 },
         zIndex: 10  // Even higher z-index to appear above background
