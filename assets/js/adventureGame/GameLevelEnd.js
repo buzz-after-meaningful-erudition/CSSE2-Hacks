@@ -61,7 +61,7 @@ class GameLevelEnd {
         src: sprite_src_chillguy,
         SCALE_FACTOR: CHILLGUY_SCALE_FACTOR,
         STEP_FACTOR: 1000,
-        ANIMATION_RATE: 50,
+        ANIMATION_RATE: 1000,
         INIT_POSITION: { x: width/16, y: height/2 },
         pixels: {height: 384, width: 512},
         orientation: {rows: 3, columns: 4 },
@@ -108,7 +108,7 @@ class GameLevelEnd {
         }
     };
 
-    console.log("Setting up classes array");
+    console.log("Setting up classes array for loading");
     this.classes = [
       { class: BackgroundParallax, data: image_data_parallax },  // Add parallax background first
       { class: GamEnvBackground, data: image_data_end },         // Then regular background
@@ -124,7 +124,7 @@ class GameLevelEnd {
   testImageExists(imageSrc, label) {
     const img = new Image();
     img.onload = () => console.log(`✅ ${label} image exists:`, imageSrc);
-    img.onerror = () => console.error(`❌ ${label} image NOT FOUND:`, imageSrc);
+    img.onerror = () => console.error(`❌ ${label} image doesnt NOT FOUND:`, imageSrc);
     img.src = imageSrc;
   }
   
@@ -150,7 +150,7 @@ class GameLevelEnd {
       debugInfo.style.top = '100px';
       debugInfo.style.right = '10px';
       debugInfo.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
-      debugInfo.style.color = '#fff';
+      debugInfo.style.color = '#fffff';
       debugInfo.style.padding = '15px';
       debugInfo.style.zIndex = '9999';
       debugInfo.style.maxWidth = '80%';
