@@ -111,4 +111,4 @@ Cyber is only going to grow—especially as we rely more on AI, healthcare IT, a
 
 If you attended the panel, don’t forget to use the **student credit code**: cyb3rc30
 
-<img src="https://github.com/user-attachments/assets/cea3357f-93d1-410f-a006-923dd8267db4" alt="Cyberceo" width="200" height="300">
+<img width="300" alt="Cyber Ceo" src="https://github.com/user-attachments/assets/cea3357f-93d1-410f-a006-923dd8267db4"/>
